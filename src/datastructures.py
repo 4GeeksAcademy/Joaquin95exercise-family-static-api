@@ -22,7 +22,8 @@ class FamilyStructure:
     def add_member(self, member):
         if 'id' not in member:
           member['id'] = self._generateId()
-          self._members.append(member)
+
+        self._members.append(member)
         return member
 
     def delete_member(self, id):
@@ -30,7 +31,7 @@ class FamilyStructure:
 
     def get_member(self, id):
         for member in self._members:
-          if member ['id'] == id:
+          if member['id'] == id:
             return member
         return None
 
